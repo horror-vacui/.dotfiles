@@ -1,0 +1,47 @@
+# [Created by task 2.5.0 12/22/2017 21:56:09]
+# Taskwarrior program configuration file.
+# For more documentation, see http://taskwarrior.org or try 'man task', 'man task-color',
+# 'man task-sync' or 'man taskrc'
+
+# Here is an example of entries that use the default, override and blank values
+#   variable=foo   -- By specifying a value, this overrides the default
+#   variable=      -- By specifying no value, this means no default
+#   #variable=foo  -- By commenting out the line, or deleting it, this uses the default
+
+# Use the command 'task show' to see all defaults and overrides
+
+# Files
+data.location=~/.task
+
+# Color theme (uncomment one to use)
+#include /usr/share/doc/task/rc/light-16.theme
+#include /usr/share/doc/task/rc/light-256.theme
+# include /usr/share/taskwarrior/dark-16.theme
+include /usr/share/taskwarrior/dark-256.theme
+#include /usr/share/taskwarrior/dark-red-256.theme
+#include /usr/share/taskwarrior/dark-green-256.theme
+#include /usr/share/taskwarrior/dark-blue-256.theme
+#include /usr/share/taskwarrior/dark-violets-256.theme
+#include /usr/share/taskwarrior/dark-yellow-green.theme
+#include /usr/share/taskwarrior/dark-gray-256.theme
+#include /usr/share/taskwarrior/dark-gray-blue-256.theme
+# include /usr/share/taskwarrior/solarized-dark-256.theme
+#include /usr/share/doc/task/rc/solarized-light-256.theme
+#include /usr/share/doc/task/rc/no-color.theme
+
+#taskd.server=freecinc.com:53589
+#taskd.key=\/home\/zoltan\/.task\/freecinc_fc2b256d.key.pem
+#taskd.certificate=\/home\/zoltan\/.task\/freecinc_fc2b256d.cert.pem
+#taskd.ca=\/home\/zoltan\/.task\/freecinc_fc2b256d.ca.pem
+#taskd.credentials=FreeCinc\/freecinc_fc2b256d\/7703779f-2f31-48d3-a972-6ae6205704cc
+
+taskd.certificate=\/home\/zoltan\/.task\/private.certificate.pem
+taskd.key=\/home\/zoltan\/.task\/private.key.pem
+taskd.ca=\/home\/zoltan\/.task\/ca.cert.pem
+taskd.server=taskwarrior.inthe.am:53589
+taskd.credentials=inthe_am/tzg6sa/44495d87-05fa-49d7-ab05-9cf1617f9e44
+taskd.trust=ignore hostname
+
+color=on
+
+weekstart = monday
