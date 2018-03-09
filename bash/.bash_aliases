@@ -17,3 +17,6 @@ if [ -x /usr/bin/dircolors ]; then
 fi
 
 alias unbracket='printf "\e[?2004l"'
+# for vimlatex
+alias vi='vim --servername vim'
+alias vim='vim --servername vim'

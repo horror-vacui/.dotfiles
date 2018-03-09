@@ -45,3 +45,5 @@ taskd.trust=ignore hostname
 color=on
 
 weekstart = monday
+# Add duration for gantt chart script
+uda.duration.type = numeric
