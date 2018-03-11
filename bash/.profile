@@ -17,7 +17,7 @@ if [ -n "$BASH_VERSION" ]; then
 fi
 
 # set PATH so it includes user's private bin directories; +TeXLive
-PATH="/usr/local/texlive/2017/bin/x86_64-linux:$HOME/bin:$HOME/.local/bin:$HOME/bin_git:$PATH"; export PATH
-MANPATH=/usr/local/texlive/2017/texmf-dist/doc/man:$MANPATH; export MANPATH
-INFOPATH=/usr/local/texlive/2017/texmf-dist/doc/info:$INFOPATH; export INFOPATH
+PATH="$HOME/local/texlive/2017/bin/x86_64-linux:$HOME/bin:$HOME/.local/bin:$HOME/bin_git:$PATH"; export PATH
+MANPATH=$HOME/local/texlive/2017/texmf-dist/doc/man:$MANPATH; export MANPATH
+INFOPATH=$HOME/local/texlive/2017/texmf-dist/doc/info:$INFOPATH; export INFOPATH
 
