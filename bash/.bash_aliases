@@ -8,7 +8,7 @@
 if [ -x /usr/bin/dircolors ]; then
     test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
     alias ls='ls --color=auto'
-    alias ll='ls -alF --color=auto'
+    alias ll='ls -alFh --color=auto'
     alias la='ls -A --color=auto'
     alias lt='ls -ltrhA --color=auto'
 
@@ -21,3 +21,5 @@ alias unbracket='printf "\e[?2004l"'
 # for vimlatex
 alias vi='vim --servername vim'
 alias vim='vim --servername vim'
+
+source .bash_aliases_local
