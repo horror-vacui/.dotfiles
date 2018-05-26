@@ -21,3 +21,6 @@ alias unbracket='printf "\e[?2004l"'
 # for vimlatex
 alias vi='vim --servername vim'
 alias vim='vim --servername vim'
+
+bck() { cp "$1" "$1_bck"; }
+brightness() { sudo sh -c "echo \"$1\" > /sys/class/backlight/intel_backlight/brightness"; }
