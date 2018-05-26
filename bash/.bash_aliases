@@ -8,7 +8,7 @@
 if [ -x /usr/bin/dircolors ]; then
     test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
     alias ls='ls --color=auto'
-    alias ll='ls -alF --color=auto'
+    alias ll='ls -alFh --color=auto'
     alias la='ls -A --color=auto'
     alias lt='ls -ltrhA --color=auto'
 
@@ -22,5 +22,9 @@ alias unbracket='printf "\e[?2004l"'
 alias vi='vim --servername vim'
 alias vim='vim --servername vim'
 
-bck() { cp "$1" "$1_bck"; }
+bck() { i=$(date "+%Y%m%d"); cp "$1" "$1_$i"; }
 brightness() { sudo sh -c "echo \"$1\" > /sys/class/backlight/intel_backlight/brightness"; }
+# For local aliases
+if [ -f .bash_aliases_local ]; then
+  source .bash_aliases_local
+fi

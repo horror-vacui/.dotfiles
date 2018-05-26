@@ -108,3 +108,12 @@ fi
 if [ -x /usr/bin/mint-fortune ]; then
      /usr/bin/mint-fortune
 fi
+
+#so as not to be disturbed by Ctrl-S ctrl-Q in terminals:
+stty -ixon
+
+PATH="/home/zoltan/perl5/bin${PATH:+:${PATH}}"; export PATH;
+PERL5LIB="/home/zoltan/perl5/lib/perl5${PERL5LIB:+:${PERL5LIB}}"; export PERL5LIB;
+PERL_LOCAL_LIB_ROOT="/home/zoltan/perl5${PERL_LOCAL_LIB_ROOT:+:${PERL_LOCAL_LIB_ROOT}}"; export PERL_LOCAL_LIB_ROOT;
+PERL_MB_OPT="--install_base \"/home/zoltan/perl5\""; export PERL_MB_OPT;
+PERL_MM_OPT="INSTALL_BASE=/home/zoltan/perl5"; export PERL_MM_OPT;
