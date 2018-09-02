@@ -21,6 +21,7 @@ alias unbracket='printf "\e[?2004l"'
 # for vimlatex
 alias vi='vim --servername vim'
 alias vim='vim --servername vim'
+alias vw='vim Dropbox/vimwiki/index.wiki'
 
 bck() { i=$(date "+%Y%m%d"); cp "$1" "$1_$i"; }
 brightness() { sudo sh -c "echo \"$1\" > /sys/class/backlight/intel_backlight/brightness"; }
