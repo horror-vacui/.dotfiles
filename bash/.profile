@@ -16,8 +16,18 @@ if [ -n "$BASH_VERSION" ]; then
     fi
 fi
 
-# set PATH so it includes user's private bin directories; +TeXLive
-PATH="$HOME/local/texlive/2017/bin/x86_64-linux:$HOME/bin:$HOME/.local/bin:$HOME/bin_git:$PATH"; export PATH
-MANPATH=$HOME/local/texlive/2017/texmf-dist/doc/man:$MANPATH; export MANPATH
-INFOPATH=$HOME/local/texlive/2017/texmf-dist/doc/info:$INFOPATH; export INFOPATH
+# SONNET PATH
+SONNET_DIR=/usr/local/sonnet; export SONNET_DIR
 
+# ADS PATHS
+HPEESOF_DIR=/usr/local/ADS2017; export HPEESOF_DIR
+PERL5LIB=$HPEESOF_DIR/tools/lib/perl5/5.22.0; export PERL5LIB
+
+# set PATH so it includes user's private bin directories; +TeXLive
+PATH="/usr/local/texlive/2017/bin/x86_64-linux:$HOME/bin:$HOME/.local/bin:$HOME/bin_git:$PATH:$SONNET_DIR/bin"; export PATH
+MANPATH=/usr/local/texlive/2017/texmf-dist/doc/man:$MANPATH; export MANPATH
+INFOPATH=/usr/local/texlive/2017/texmf-dist/doc/info:$INFOPATH; export INFOPATH
+
+
+# focus on selected application windows
+source "$HOME/bin/search_and_create.sh"
