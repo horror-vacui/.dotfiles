@@ -21,5 +21,8 @@ alias unbracket='printf "\e[?2004l"'
 # for vimlatex
 alias vi='vim --servername vim'
 alias vim='vim --servername vim'
+alias sb='source ~/.bashrc'
+
+alias wttr='curl http://v2.wttr.in/Dresden'
 
 source .bash_aliases_local
