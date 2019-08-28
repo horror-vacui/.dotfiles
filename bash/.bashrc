@@ -108,3 +108,6 @@ fi
 if [ -x /usr/bin/mint-fortune ]; then
      /usr/bin/mint-fortune
 fi
+
+# some functions
+source "$HOME/bin/search_and_create.sh"
