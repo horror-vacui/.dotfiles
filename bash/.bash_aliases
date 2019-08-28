@@ -24,5 +24,11 @@ alias vim='vim --servername vim'
 alias sb='source ~/.bashrc'
 
 alias wttr='curl http://v2.wttr.in/Dresden'
+alias vw='vim Dropbox/vimwiki/index.wiki'
 
-source .bash_aliases_local
+bck() { i=$(date "+%Y%m%d"); cp "$1" "$1_$i"; }
+brightness() { sudo sh -c "echo \"$1\" > /sys/class/backlight/intel_backlight/brightness"; }
+# For local aliases
+if [ -f .bash_aliases_local ]; then
+  source .bash_aliases_local
+fi
