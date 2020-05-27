@@ -16,17 +16,27 @@ if [ -n "$BASH_VERSION" ]; then
     fi
 fi
 
-# SONNET PATH
-SONNET_DIR=/usr/local/sonnet; export SONNET_DIR
-
-# ADS PATHS
-HPEESOF_DIR=/usr/local/ADS2017; export HPEESOF_DIR
-PERL5LIB=$HPEESOF_DIR/tools/lib/perl5/5.22.0; export PERL5LIB
-
-# set PATH so it includes user's private bin directories; +TeXLive
-PATH="/usr/local/texlive/2017/bin/x86_64-linux:$HOME/bin:$HOME/.local/bin:$HOME/bin_git:$PATH:$SONNET_DIR/bin"; export PATH
-MANPATH=/usr/local/texlive/2017/texmf-dist/doc/man:$MANPATH; export MANPATH
-INFOPATH=/usr/local/texlive/2017/texmf-dist/doc/info:$INFOPATH; export INFOPATH
-
 # focus on selected application windows
 source "$HOME/bin/search_and_create.sh"
+
+if [ "HOSTNAME$" = "ccn-bar223bl" ]; then
+  # SONNET PATH
+  SONNET_DIR=/usr/local/sonnet; export SONNET_DIR
+
+  # ADS PATHS
+  HPEESOF_DIR=/usr/local/ADS2017; export HPEESOF_DIR
+  PERL5LIB=$HPEESOF_DIR/tools/lib/perl5/5.22.0; export PERL5LIB
+
+  # set PATH so it includes user's private bin directories; +TeXLive
+  PATH="/usr/local/texlive/2017/bin/x86_64-linux:$HOME/bin:$HOME/.local/bin:$HOME/bin_git:$PATH:$SONNET_DIR/bin"; export PATH
+  MANPATH=/usr/local/texlive/2017/texmf-dist/doc/man:$MANPATH; export MANPATH
+  INFOPATH=/usr/local/texlive/2017/texmf-dist/doc/info:$INFOPATH; export INFOPATH
+fi  
+
+# set PATH so it includes user's private bin directories; +TeXLive
+if [ "HOSTNAME$" = "aprosag" ]; then
+  # It might worth considering different dotfiles for different machines for the differences
+  PATH="/usr/local/texlive/2020/bin/x86_64-linux:$HOME/bin:$HOME/.local/bin:$HOME/bin_git:/usr/java/jre1.8.0_161/bin:$PATH"; export PATH
+  MANPATH=/usr/local/texlive/2020/texmf-dist/doc/man:$MANPATH; export MANPATH
+  INFOPATH=/usr/local/texlive/2020/texmf-dist/doc/info:$INFOPATH; export INFOPATH
+fi

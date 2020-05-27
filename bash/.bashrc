@@ -112,8 +112,12 @@ fi
 #so as not to be disturbed by Ctrl-S ctrl-Q in terminals:
 stty -ixon
 
-PATH="/home/zoltan/perl5/bin${PATH:+:${PATH}}"; export PATH;
-PERL5LIB="/home/zoltan/perl5/lib/perl5${PERL5LIB:+:${PERL5LIB}}"; export PERL5LIB;
+# Set paths in .profile
+# PATH="/home/zoltan/perl5/bin${PATH:+:${PATH}}:/usr/local/texlive/2019/bin/x86_64-linux"; export PATH;
+# PERL5LIB="/home/zoltan/perl5/lib/perl5${PERL5LIB:+:${PERL5LIB}}"; export PERL5LIB; # I needed to unset it for latexmk
 PERL_LOCAL_LIB_ROOT="/home/zoltan/perl5${PERL_LOCAL_LIB_ROOT:+:${PERL_LOCAL_LIB_ROOT}}"; export PERL_LOCAL_LIB_ROOT;
 PERL_MB_OPT="--install_base \"/home/zoltan/perl5\""; export PERL_MB_OPT;
 PERL_MM_OPT="INSTALL_BASE=/home/zoltan/perl5"; export PERL_MM_OPT;
+# MANPATH="${MANPATH}:/usr/local/texlive/2019/texmf-dist/doc/man"
+# INFOPATH="${INFOPATH}:/usr/local/texlive/2019/texmf-dist/doc/info"
+
