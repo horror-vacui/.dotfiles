@@ -22,6 +22,7 @@ alias unbracket='printf "\e[?2004l"'
 alias vi='vim --servername vim'
 alias vim='vim --servername vim'
 alias sb='source ~/.bashrc'
+alias dff='df -h -x "squashfs"'
 
 alias wttr='curl http://v2.wttr.in/Dresden'
 alias vw='vim Dropbox/vimwiki/index.wiki'
