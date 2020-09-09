@@ -19,7 +19,7 @@ fi
 # focus on selected application windows
 source "$HOME/bin/search_and_create.sh"
 
-if [ "HOSTNAME$" = "ccn-bar223bl" ]; then
+if [ "$HOSTNAME" = "ccn-bar223bl" ]; then
   # SONNET PATH
   SONNET_DIR=/usr/local/sonnet; export SONNET_DIR
 
@@ -34,7 +34,7 @@ if [ "HOSTNAME$" = "ccn-bar223bl" ]; then
 fi  
 
 # set PATH so it includes user's private bin directories; +TeXLive
-if [ "HOSTNAME$" = "aprosag" ]; then
+if [ "$HOSTNAME" = "aprosag" ]; then
   # It might worth considering different dotfiles for different machines for the differences
   PATH="/usr/local/texlive/2020/bin/x86_64-linux:$HOME/bin:$HOME/.local/bin:$HOME/bin_git:/usr/java/jre1.8.0_161/bin:$PATH"; export PATH
   MANPATH=/usr/local/texlive/2020/texmf-dist/doc/man:$MANPATH; export MANPATH
