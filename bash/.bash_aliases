@@ -21,6 +21,9 @@ alias unbracket='printf "\e[?2004l"'
 # for vimlatex
 alias vi='vim --servername vim'
 alias vim='vim --servername vim'
+alias dff='df -h -x "squashfs"'
+
+alias wttr='curl http://v2.wttr.in/Dresden'
 alias vw='vim Dropbox/vimwiki/index.wiki'
 
 bck() { i=$(date "+%Y%m%d"); cp "$1" "$1_$i"; }
