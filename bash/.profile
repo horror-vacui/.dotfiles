@@ -40,3 +40,11 @@ if [ "$HOSTNAME" = "aprosag" ]; then
   MANPATH=/usr/local/texlive/2020/texmf-dist/doc/man:$MANPATH; export MANPATH
   INFOPATH=/usr/local/texlive/2020/texmf-dist/doc/info:$INFOPATH; export INFOPATH
 fi
+
+# set PATH so it includes user's private bin directories; +TeXLive
+if [ "$HOSTNAME" = "adrian" ]; then
+  # It might worth considering different dotfiles for different machines for the differences
+  PATH="/usr/local/texlive/2020/bin/x86_64-linux:$HOME/bin:$HOME/.local/bin:$HOME/git_repos/vcsv2df:$PATH"; export PATH
+  MANPATH=/usr/local/texlive/2020/texmf-dist/doc/man:$MANPATH; export MANPATH
+  INFOPATH=/usr/local/texlive/2020/texmf-dist/doc/info:$INFOPATH; export INFOPATH
+fi
