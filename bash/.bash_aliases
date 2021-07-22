@@ -26,8 +26,18 @@ alias dff='df -h -x "squashfs"'
 alias wttr='curl http://v2.wttr.in/Dresden'
 alias vw='vim Dropbox/vimwiki/index.wiki'
 
+
+# grep the running process names: ps-grep
+# I find ist output better than the pgrep
+pg() { ps -aux | egrep $1;}
+
+# to make backup creation easier
 bck() { i=$(date "+%Y%m%d"); cp "$1" "$1_$i"; }
+
+# to change the brightness on my laptop, where the hardware keys has not worked.
+# there is no chance I could remember the path without error
 brightness() { sudo sh -c "echo \"$1\" > /sys/class/backlight/intel_backlight/brightness"; }
+
 # For local aliases
 if [ -f .bash_aliases_local ]; then
   source .bash_aliases_local
