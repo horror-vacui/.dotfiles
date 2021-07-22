@@ -17,7 +17,7 @@ data.location=~/.task
 #include /usr/share/doc/task/rc/light-16.theme
 #include /usr/share/doc/task/rc/light-256.theme
 # include /usr/share/taskwarrior/dark-16.theme
-include /usr/share/taskwarrior/dark-256.theme
+#####include /usr/share/taskwarrior/dark-256.theme
 #include /usr/share/taskwarrior/dark-red-256.theme
 #include /usr/share/taskwarrior/dark-green-256.theme
 #include /usr/share/taskwarrior/dark-blue-256.theme
